@@ -1,0 +1,28 @@
+.wrapper {
+	border: 1px solid red;
+	margin: 0 auto;
+	width: 387px;
+}
+input[type="number"] {
+	width: 120px;
+	box-sizing: border-box;
+}
+input[type="button"] {
+	width: 35%;
+	box-sizing: border-box;
+}
+td {
+	border: 1px solid red;
+	width: 20px;
+	height: 1em;
+}
+table{
+	margin: 0 auto;
+}
+.colorBG {
+	background: red;
+}
+#count {
+	text-align: center;
+	font-size: 1.2em;
+}
