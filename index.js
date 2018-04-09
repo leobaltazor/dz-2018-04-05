@@ -1,11 +1,11 @@
-function _table(r,c) {
+function _table(r, c) {
 	let table = "<table>";
 	for (let i = 0; i < r; i++) {
 		table += "<tr>"
 		for (let k = 0; k < c; k++) {
 			table += "<td>";
 			//функция которая будет заполнять ячейки или красить их
-			table += "</td>";		
+			table += "</td>";
 		}
 		table += "</tr>"
 	}
@@ -19,27 +19,27 @@ function _randTD(arg) {
 	for (let i = 0; i < len; i++) {
 		let element = document.querySelectorAll("td")[i];
 		element.classList.remove("colorBG")
-		let r = Math.round(Math.random()*10);
+		let r = Math.round(Math.random() * 10);
 		if (r % 2 == 0) {
 			element.classList.add("colorBG")
 			element.innerHTML = "";
 			element.style.background = _randcolor();
-		}	else {
+		} else {
 			element.classList.remove("colorBG")
-			r = Math.round(Math.random()*(1000000));
+			r = Math.round(Math.random() * (1000000));
 			let text = r.toString(36);
 			element.innerHTML = text;
 			element.style.background = "";
 		}
 	}
-	document.getElementById("count").innerHTML = "Количество ячеек с background="+_count();
+	document.getElementById("count").innerHTML = "Количество ячеек с background=" + _count();
 }
 
-function _randcolor(){
-	var r=Math.floor(Math.random() * (256));
-	var g=Math.floor(Math.random() * (256));
-	var b=Math.floor(Math.random() * (256));
-	var c='#' + r.toString(16) + g.toString(16) + b.toString(16);
+function _randcolor() {
+	var r = Math.floor(Math.random() * (256));
+	var g = Math.floor(Math.random() * (256));
+	var b = Math.floor(Math.random() * (256));
+	var c = '#' + r.toString(16) + g.toString(16) + b.toString(16);
 	return c;
 }
 
@@ -57,7 +57,7 @@ function _count() {
 function gogo() {
 	let _row = document.querySelectorAll("input[type='number']")[0].value;
 	let _col = document.querySelectorAll("input[type='number']")[1].value;
-	_table(_row,_col);
+	_table(_row, _col);
 }
 
 
